@@ -1,2 +1,8 @@
-<app-navbar></app-navbar>
+<app-navbar 
+(greet)="receiveEmition($event)" 
+[propertyChild]="propertyParent">
+</app-navbar>
+@if (childEmition.length > 0) {
+    <h4>{{childEmition}}</h4>
+}
 <router-outlet></router-outlet>
