@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormsModule, ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule, FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -17,8 +17,8 @@ export class LoginComponent {
   apiResponse: any = "";
 
   profileForm = new FormGroup({
-    name: new FormControl(''),
-    mail: new FormControl(''),
+    name: new FormControl('value default', Validators.required),
+    mail: new FormControl('', Validators.required),
   });
 
   handleReactiveSubmit(): void {
