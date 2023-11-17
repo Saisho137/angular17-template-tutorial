@@ -39,6 +39,8 @@
         This statement comes from my heart and is not at all copied and pasted.</p>
 </article>
 
+<img [ngSrc]="logoSaishoUrl" alt="Saisho's Logo" width="50" height="50" priority>
+
 @defer (on viewport) {
 <app-login />
 } @placeholder () {
@@ -46,3 +48,5 @@
 } @loading (minimum 2s) {
 <p>Loading Login!</p>
 }
+
+<img ngSrc="/assets/images/logoBeathub.png" alt="Beathub Logo" width="32" height="32">
