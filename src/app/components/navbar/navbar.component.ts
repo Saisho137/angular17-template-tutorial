@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ComponentNavbar } from '../../interfaces/component-navbar';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ export class NavbarComponent {
   @Input() propertyChild: string = "";
   @Output() greet: EventEmitter<string> = new EventEmitter<string>();
 
-  componentsNavbar: {id: string, name: string}[] = [{id: "1", name: "home"}, {id: "2", name: "login"}, {id: "3", name: "logo"}];
+  componentsNavbar: ComponentNavbar[] = [{id: "1", name: "home"}, {id: "2", name: "login"}, {id: "3", name: "logo"}];
 
   isInHome: boolean = true;
   
