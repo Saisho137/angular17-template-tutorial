@@ -15,6 +15,7 @@ export class AppComponent {
   childEmition: string = "";
 
   logoSaishoUrl: string = "/assets/images/logoSaisho.png"
+  title: any;
 
   receiveEmition($event: string): void {
     this.childEmition = $event;

@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentNavbar } from '../../interfaces/component-navbar';
+import { ApiSimulationService } from '../../services/api-simulation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,10 @@ export class NavbarComponent {
   @Input() propertyChild: string = "";
   @Output() greet: EventEmitter<string> = new EventEmitter<string>();
 
-  componentsNavbar: ComponentNavbar[] = [{id: "1", name: "home"}, {id: "2", name: "login"}, {id: "3", name: "logo"}];
+  componentsNavbar: ComponentNavbar[] = [];
+  constructor(private apiService: ApiSimulationService) {
+    this.componentsNavbar = apiService.getComponents()
+  }
 
   isInHome: boolean = true;
   

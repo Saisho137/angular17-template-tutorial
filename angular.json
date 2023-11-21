@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "planning-poker": {
+    "angular17-template-tutorial": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/planning-poker",
+            "outputPath": "dist/angular17-template-tutorial",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "planning-poker:build:production"
+              "buildTarget": "angular17-template-tutorial:build:production"
             },
             "development": {
-              "buildTarget": "planning-poker:build:development"
+              "buildTarget": "angular17-template-tutorial:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "planning-poker:build"
+            "buildTarget": "angular17-template-tutorial:build"
           }
         },
         "test": {
